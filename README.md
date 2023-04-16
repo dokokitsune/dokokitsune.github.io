@@ -1,1 +1,1 @@
-# dokokitsune.githuhub.io
+# dokokitsune.github.io
