@@ -151,11 +151,8 @@ button{
   grid-column: 2 / span 3;
   grid-template-columns: summary 10px;
 
-  font-size: large;
-  line-height: 2;
-
-
-
+  font-size: x-large;
+  line-height: 2.5;
   color: yellow;
 }
 
@@ -209,12 +206,7 @@ textarea.contactFormText{
 }
 
 
-
-
-
-
-
-
+ /* Universal Footer */
 
 .footerContent{
   position: absolute;
