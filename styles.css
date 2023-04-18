@@ -133,6 +133,13 @@ button{
 
 }
 
+.mySkills h2{
+  text-align: center;
+  text-decoration: underline;
+  padding-bottom: 10px;
+
+}
+
 
 .mySkills li{
   padding: 10px;
