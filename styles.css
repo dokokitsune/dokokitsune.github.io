@@ -1,3 +1,8 @@
+:root{
+  /* Color variables */
+  --barColor: rgb(29, 46, 56);
+}
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -27,7 +32,7 @@ header{
   opacity: 0.9;
   border-radius: 20px;
 
-  background-color: rgb(29, 46, 56);
+  background-color: var(--barColor);
   border-color: rgb(16, 34, 83);
 
   padding: 10px 50px;
@@ -47,6 +52,7 @@ header{
 .header a{
   color: white;
   font-weight: 600;
+  
   text-decoration: none;
   transition: 0.4s;
   padding: 8px 16px;
@@ -59,10 +65,24 @@ header{
   background-color: gray;
 }
 
-button{
-  padding: 7px 5px;
+.cta{
+  text-decoration: none;
   border: none;
+  border-radius: 25px;
+  color: white;
+  background-color: var(--barColor);
+  padding: 8px 16px;
+  font-weight: 600;
 }
+
+.cta:hover{
+  transition: 0.4s;
+  background-color: gray;
+ 
+
+}
+
+
 
 
 .containerBox{
@@ -217,7 +237,7 @@ textarea.contactFormText{
 
 .footerContent{
   position: absolute;
-  background-color: rgb(29, 46, 56);
+  background-color: var(--barColor);
   opacity: 0.8;
   display: flex;
   bottom: 0;
@@ -233,11 +253,9 @@ textarea.contactFormText{
 .footerText{
 
   padding-right: 5px;
-
   margin-left: auto;
   margin-top: auto;
   margin-bottom: auto;
-
   color:yellow;
 
 
@@ -245,7 +263,6 @@ textarea.contactFormText{
 
 .iconContainer{
   opacity: 0.8;
-
   display: flex;
   padding: 5px;
 }
