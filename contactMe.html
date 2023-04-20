@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title>Weston Wood - Contact Me</title>
@@ -21,21 +21,33 @@
         <a href="#" class="isActive">Contact Me</a>
       </nav>
     </div>
-      <a class="cta" href="General Resume.docx"><button>Resume</button></a>
+    <a class="cta" href="General Resume.pdf">Resume</a>
     </div>
   </header>
 
-  
+
   <div class="contactContainer">
     <h1>Contact Me</h1>
-    <form class="contactForm" action="https://formsubmit.co/wwood98@outlook.com" method="POST">
+    <form class="contactForm" name="submit-to-google-sheet">
       <input type="text" name="Name" class="contactFormText" placeholder="Your name" required>
       <input type="email" name="Email" class="contactFormText" placeholder="Your email" required>
       <input type="text" name="Phone Number" class="contactFormText" placeholder="Your phone number" required>
       <textarea class="contactFormText" name="Message" placeholder="Your Message" required></textarea>
       <button type="submit" class="contactForm-Btn">Send</button>
     </form>
-    
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxFHeAd7E5ueU-tBfRa3ekFDyJsGEheJP0O8z1GkYilfAD-dm2xCQL3bEq28-1Ty8f40A/exec'
+      const form = document.forms['submit-to-google-sheet']
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Message Sent Successfuly!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
 
   </div>
 
