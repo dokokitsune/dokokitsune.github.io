@@ -38,18 +38,26 @@
       <textarea class="contactFormText" name="Message" placeholder="Your Message" required></textarea>
       <button type="submit" class="contactForm-Btn">Send</button>
     </form>
+    
+    <p id="submitMessage"></p>
 
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbxFHeAd7E5ueU-tBfRa3ekFDyJsGEheJP0O8z1GkYilfAD-dm2xCQL3bEq28-1Ty8f40A/exec'
       const form = document.forms['submit-to-google-sheet']
+      
 
       form.addEventListener('submit', e => {
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Message Sent Successfuly!', response))
+          .then(document.getElementsByClassName("submitAlert").innerHTML = "Submited Successfully")
           .catch(error => console.error('Error!', error.message))
       })
+      
     </script>
+
+    <div class=""></div>
+
+
 
 
   </div>

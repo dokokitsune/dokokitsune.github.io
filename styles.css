@@ -180,12 +180,12 @@ header{
   text-align: center;
 
   font-size: 28px;
-  line-height: 2.5;
+  line-height: 2;
   color: yellow;
 }
 
 
-/* About me */
+/* Contact me */
 
 .contactContainer{
   position: relative;
@@ -231,6 +231,19 @@ textarea.contactFormText{
 
 .contactForm-Btn:hover{
   background-color: slategray;
+}
+
+#submitMessage{
+  display:block;
+  position: relative;
+  align-self: center;
+  text-align: center;
+  width: 180px;
+  height: auto;
+  border-radius: 15px;
+  color: yellow;
+  background-color: lightgreen;
+  transition: 0.5s;
 }
 
 
