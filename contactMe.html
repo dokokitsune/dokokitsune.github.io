@@ -29,30 +29,30 @@
   </header>
 
 
+  <script src="main.js"></script>
   <div class="contactContainer">
     <h1>Contact Me</h1>
     <form class="contactForm" name="submit-to-google-sheet">
-      <input type="text" name="Name" class="contactFormText" placeholder="Your name" required>
-      <input type="email" name="Email" class="contactFormText" placeholder="Your email" required>
-      <input type="text" name="Phone Number" class="contactFormText" placeholder="Your phone number" required>
-      <textarea class="contactFormText" name="Message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="contactForm-Btn">Send</button>
+      <input type="text" name="Name" class="contactFormText" placeholder="Your name" id="nameText"  required>
+      <input type="email" name="Email" class="contactFormText" placeholder="Your email" id="emailText" required>
+      <input type="text" name="Phone Number" class="contactFormText" placeholder="Your phone number" id="numberText" required>
+      <textarea class="contactFormText" name="Message" placeholder="Your Message"  id="messageText" required></textarea>
+      <button type="submit" class="contactForm-Btn" >Send</button>
     </form>
-    
-    <p id="submitMessage"></p>
 
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbxFHeAd7E5ueU-tBfRa3ekFDyJsGEheJP0O8z1GkYilfAD-dm2xCQL3bEq28-1Ty8f40A/exec'
       const form = document.forms['submit-to-google-sheet']
-      
+
 
       form.addEventListener('submit', e => {
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(document.getElementsByClassName("submitAlert").innerHTML = "Submited Successfully")
-          .catch(error => console.error('Error!', error.message))
+          .then(alert("Succesfully Sent"))
+          .catch(("Error Sending"))
+        clearAllText();
       })
-      
+
     </script>
 
     <div class=""></div>

@@ -233,18 +233,12 @@ textarea.contactFormText{
   background-color: slategray;
 }
 
-#submitMessage{
-  display:block;
-  position: relative;
-  align-self: center;
-  text-align: center;
-  width: 180px;
-  height: auto;
-  border-radius: 15px;
-  color: yellow;
-  background-color: lightgreen;
-  transition: 0.5s;
+.submitSuccess, .submitFail {
+
+
+
 }
+
 
 
  /* Universal Footer */
