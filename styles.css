@@ -23,6 +23,8 @@
   background-position: center;
 }
 
+/* Universal Header */
+
 header{
   position: relative;
   display: flex;
@@ -83,7 +85,7 @@ header{
 }
 
 
-
+/* Homepage */
 
 .containerBox{
   position: relative;
@@ -233,10 +235,32 @@ textarea.contactFormText{
   background-color: slategray;
 }
 
-.submitSuccess, .submitFail {
+
+/* about me */
+
+.amContainer{
+  display: grid;
+  grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+  position: relative;
 
 
+}
 
+.amTitle{
+  display: flex;
+  justify-self: center;
+  color: yellow;
+  grid-column: 3;
+
+  margin-top: 10vw;
+
+  font-size: x-large;
+}
+
+.amSummary{
+  display: flex;
+  color: yellow;
+  grid-row: 2;
 }
 
 
