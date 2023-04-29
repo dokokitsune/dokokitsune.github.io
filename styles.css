@@ -241,6 +241,7 @@ textarea.contactFormText{
 .amContainer{
   display: grid;
   grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+  row-gap: 50px;
   position: relative;
 
 
@@ -248,19 +249,28 @@ textarea.contactFormText{
 
 .amTitle{
   display: flex;
-  justify-self: center;
-  color: yellow;
   grid-column: 3;
+  margin-top: 7vw;
+  justify-content: center;
 
-  margin-top: 10vw;
+}
 
-  font-size: x-large;
+.amTitle h1{
+  color: yellow;
+  font-size: 48px;
 }
 
 .amSummary{
-  display: flex;
-  color: yellow;
   grid-row: 2;
+  grid-column: 2;
+  font-size: xx-large;
+  line-height: 2;
+}
+
+.amSummary p{
+  text-align: center;
+  color: yellow;
+
 }
 
 
