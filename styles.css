@@ -327,6 +327,13 @@ textarea.contactFormText{
   color:yellow;
 }
 
+.ribbon{
+  position: absolute;
+  display: flex;
+  bottom: 25px;
+  right: 0;
+}
+
 
 
  /* Universal Footer */
